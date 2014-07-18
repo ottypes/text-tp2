@@ -5,7 +5,8 @@ assert = require 'assert'
 
 fuzzer = require 'ot-fuzzer'
 
-text = require '../lib/text-tp2'
+text = require('../lib').type
+genOp = require './genOp'
 
 describe 'text-tp2', ->
   it 'creates using provided string data', ->
@@ -109,7 +110,7 @@ describe 'text-tp2', ->
 
   describe 'randomizer', -> it 'passes', ->
     @slow 2000
-    fuzzer text, require('./genOp')
+    fuzzer text, genOp
 
 # Its sort of a hack to use this directly here
-require('ot-text/test/api') require('../lib'), require('./genOp')
+require('ot-text/test/api') text, genOp
