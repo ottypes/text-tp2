@@ -111,3 +111,5 @@ describe 'text-tp2', ->
     @slow 2000
     fuzzer text, require('./genOp')
 
+# Its sort of a hack to use this directly here
+require('ot-text/test/api') require('../lib'), require('./genOp')
