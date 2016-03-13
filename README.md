@@ -17,7 +17,7 @@ This is encoded in a document as ['some ', (2 tombstones), 'string']
 (It should be encoded as {s:'some string', t:[5, -2, 6]} because thats
 faster in JS, but its not.)
 
-Just like in the 'normal' [plaintext type](/ottypes/text), Ops are lists of
+Just like in the 'normal' [plaintext type](https://github.com/ottypes/text), Ops are lists of
 components which iterate over the whole document.
 
 Components are either:
